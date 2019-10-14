@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#008577</color>
+    <color name="colorPrimaryDark">#00574B</color>
+    <color name="colorAccent">#D81B60</color>
+    <color name="green">#179F76</color>
+    <color name="blue">#2A74FF</color>
+    <color name="pink">#9B2E2E</color>
+    <color name="ptrFrame">#5BC3F0</color>
+
+    <color name="channelNormalTextColor">#FFFFFF</color>
+    <color name="channelFixedTextColor">#B2B5E2</color>
+    <color name="subTitleTextColor">#A0A3AF</color>
+
+    <color name="purple01">#49FFEC</color>
+</resources>

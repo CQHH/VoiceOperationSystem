@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/lin"
+    android:layout_width="match_parent"
+    android:layout_height="30dp"
+    android:background="#141F4C"
+    android:orientation="horizontal"
+    android:gravity="center_vertical">
+
+    <TextView
+        android:id="@+id/date"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="10:00-12:00"
+        android:textSize="12sp"
+        android:textColor="#C4C6CE"
+        android:layout_marginLeft="12dp"
+        android:layout_marginRight="12dp"/>
+
+    <TextView
+        android:id="@+id/info"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="未来·科技驱动产业升级论坛"
+        android:textSize="12sp"
+        android:textColor="#C4C6CE"
+        android:layout_marginLeft="12dp"
+        android:layout_alignParentRight="true"
+        android:layout_marginRight="12dp"
+        android:layout_toRightOf="@+id/date"
+        android:gravity="right"
+        android:ellipsize="end"
+        android:singleLine="true"/>
+
+</RelativeLayout>

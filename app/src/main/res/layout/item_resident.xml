@@ -1,0 +1,153 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/re"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:paddingTop="12dp"
+    android:paddingBottom="12dp">
+
+    <RelativeLayout
+        android:id="@+id/top"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:id="@+id/number"
+            android:layout_width="80dp"
+            android:layout_height="wrap_content"
+            android:text="131路"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            android:textColor="#49FDEA"
+            android:gravity="center"
+            android:background="@drawable/item_resident_shape"
+            android:layout_centerVertical="true"
+            android:paddingTop="6dp"
+            android:paddingBottom="6dp"/>
+
+        <TextView
+            android:id="@+id/starting"
+            android:layout_width="10dp"
+            android:layout_height="10dp"
+            android:background="@drawable/item_resident_circular_d_shape"
+            android:layout_centerVertical="true"
+            android:layout_toRightOf="@+id/number"
+            android:layout_marginLeft="12dp"/>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_toRightOf="@+id/starting"
+            android:layout_marginLeft="12dp"
+            android:layout_centerVertical="true">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="起点站"
+                android:textSize="12sp"
+                android:textColor="#B9C7D6"/>
+
+            <TextView
+                android:id="@+id/start"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="四公里公交枢纽站"
+                android:textSize="16sp"
+                android:textColor="#ffffff"
+                android:textStyle="bold"
+                android:layout_marginTop="4dp"/>
+
+        </LinearLayout>
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/top">
+
+        <TextView
+            android:id="@+id/number_seat"
+            android:layout_width="80dp"
+            android:layout_height="35dp"/>
+
+        <LinearLayout
+            android:id="@+id/lin"
+            android:layout_width="10dp"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_marginLeft="12dp"
+            android:gravity="center_horizontal"
+            android:layout_toRightOf="@+id/number_seat">
+
+            <TextView
+                android:layout_width="5dp"
+                android:layout_height="5dp"
+                android:background="@drawable/item_resident_circular_x_shape"/>
+
+            <TextView
+                android:layout_width="5dp"
+                android:layout_height="5dp"
+                android:background="@drawable/item_resident_circular_x_shape"
+                android:layout_marginTop="12dp"/>
+
+            <TextView
+                android:layout_width="5dp"
+                android:layout_height="5dp"
+                android:background="@drawable/item_resident_circular_x_shape"
+                android:layout_marginTop="12dp"/>
+
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/end"
+            android:layout_width="10dp"
+            android:layout_height="10dp"
+            android:background="@drawable/item_resident_circular_d_shape"
+            android:layout_marginTop="12dp"
+            android:layout_toRightOf="@+id/number_seat"
+            android:layout_marginLeft="12dp"
+            android:layout_below="@+id/lin"/>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_toRightOf="@+id/end"
+            android:layout_marginLeft="12dp"
+            android:layout_centerVertical="true"
+            android:layout_below="@+id/lin">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="终点站"
+                android:textSize="12sp"
+                android:textColor="#B9C7D6"/>
+
+            <TextView
+                android:id="@+id/end_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="四公里公交枢纽站"
+                android:textSize="16sp"
+                android:textColor="#ffffff"
+                android:textStyle="bold"
+                android:layout_marginTop="4dp"/>
+
+        </LinearLayout>
+
+    </RelativeLayout>
+
+    <ImageView
+        android:id="@+id/image"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/right_gj"
+        android:layout_centerVertical="true"
+        android:layout_alignParentRight="true"/>
+
+</RelativeLayout>

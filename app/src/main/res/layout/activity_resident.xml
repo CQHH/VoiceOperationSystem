@@ -1,0 +1,160 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <com.amap.api.maps.MapView
+        android:id="@+id/map_transit"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+
+    <LinearLayout
+        android:id="@+id/lin"
+        android:layout_width="320dp"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:background="#990f215b"
+        android:layout_above="@+id/view_hr">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="当前位置：重庆国际博览中心"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            android:textColor="#ffffff"
+            android:layout_gravity="center_horizontal"
+            android:paddingTop="12dp"
+            android:paddingBottom="12dp"/>
+
+        <com.em.refresh.PtrFrameLayout
+            xmlns:android="http://schemas.android.com/apk/res/android"
+            android:id="@+id/refresh"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_above="@+id/hr">
+
+            <android.support.v7.widget.RecyclerView
+                android:id="@+id/recyvlerview"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+            </android.support.v7.widget.RecyclerView>
+
+        </com.em.refresh.PtrFrameLayout>
+
+    </LinearLayout>
+
+    <View
+        android:id="@+id/view_hr"
+        android:layout_width="320dp"
+        android:layout_height="0.5dp"
+        android:background="#132240"
+        android:layout_above="@+id/fd_re">
+    </View>
+
+    <RelativeLayout
+        android:id="@+id/fd_re"
+        android:layout_width="320dp"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:background="#990f215b">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="45dp"
+            android:orientation="horizontal">
+
+            <RelativeLayout
+                android:id="@+id/back_re"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:layout_toLeftOf="@+id/fill">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="返回"
+                    android:textSize="12sp"
+                    android:textColor="#ffffff"
+                    android:gravity="center"
+                    android:drawableTop="@drawable/back"
+                    android:drawablePadding="2dp"
+                    android:layout_centerVertical="true"
+                    android:layout_centerHorizontal="true"/>
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/location_re"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_toRightOf="@+id/back_re"
+                android:layout_gravity="center_vertical"
+                android:layout_weight="1">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="当前位置"
+                    android:textSize="12sp"
+                    android:textColor="#ffffff"
+                    android:gravity="center"
+                    android:drawableTop="@drawable/location"
+                    android:drawablePadding="2dp"
+                    android:layout_centerVertical="true"
+                    android:layout_centerHorizontal="true"/>
+
+            </RelativeLayout>
+
+        </LinearLayout>
+
+    </RelativeLayout>
+
+    <View
+        android:id="@+id/view"
+        android:layout_width="0.5dp"
+        android:layout_height="match_parent"
+        android:background="#132240"
+        android:layout_toRightOf="@+id/lin">
+    </View>
+
+    <LinearLayout
+        android:id="@+id/lin_site"
+        android:layout_width="190dp"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:background="#98051942"
+        android:layout_toRightOf="@+id/view"
+        android:visibility="gone"
+        android:elevation="3dp">
+
+        <TextView
+            android:id="@+id/line_text_two"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="131路所经站点"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            android:textColor="#ffffff"
+            android:layout_gravity="center_horizontal"
+            android:paddingTop="12dp"
+            android:paddingBottom="12dp"/>
+
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/recyvlerview_two"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+        </android.support.v7.widget.RecyclerView>
+
+    </LinearLayout>
+
+    <View
+        android:layout_width="0.5dp"
+        android:layout_height="match_parent"
+        android:background="#132240"
+        android:layout_toRightOf="@+id/lin_site">
+    </View>
+
+</RelativeLayout>

@@ -1,0 +1,68 @@
+apply plugin: 'com.android.application'
+
+android {
+    compileSdkVersion 28
+    defaultConfig {
+        applicationId "com.cq.hhxk.voice.voiceoperationsystem"
+        minSdkVersion 23
+        targetSdkVersion 28
+        versionCode 1
+        versionName "1.0"
+        testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
+        // 避免"64K 引用限制"
+        multiDexEnabled true
+        // 导航SDK内部使用了annotationProcessor，需要添加下面代码，防止编译异常
+        javaCompileOptions { annotationProcessorOptions { includeCompileClasspath = true } }
+        ndk {
+            abiFilters 'armeabi'
+        }
+
+    }
+    repositories {
+        flatDir {
+            dirs 'libs'
+        }
+    }
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+    }
+    useLibrary 'org.apache.http.legacy'
+}
+
+dependencies {
+    implementation fileTree(include: ['*.jar'], dir: 'libs')
+    androidTestImplementation('com.android.support.test.espresso:espresso-core:2.2.2', {
+        exclude group: 'com.android.support', module: 'support-annotations'
+    })
+    implementation 'com.android.support:appcompat-v7:27.0.2'
+    testImplementation 'junit:junit:4.12'
+    implementation project(path: ':baseFrame')
+    implementation project(path: ':baseFrame')
+    implementation project(path: ':baseBanner')
+    implementation files('libs/bdasr_V3_20180801_d6f298a.jar')
+    implementation files('libs/com.baidu.tts_2.3.2.20180713_6101c2a.jar')
+    implementation files('libs/AMap3DMap_6.9.2_AMapNavi_6.9.0_AMapSearch_6.9.2_AMapLocation_4.7.0_20190710.jar')
+    implementation files('libs/Msc.jar')
+    implementation fileTree(include: ['*.jar'], dir: 'libs')
+    //注解
+    implementation 'com.jakewharton:butterknife:8.8.1'
+    annotationProcessor 'com.jakewharton:butterknife-compiler:8.8.1'
+    //Fresco
+    implementation 'com.facebook.fresco:fresco:0.12.0'
+    implementation 'com.facebook.fresco:animated-gif:0.12.0'
+    //权限
+    implementation 'com.github.hotchemi:permissionsdispatcher:2.2.0'
+    annotationProcessor 'com.github.hotchemi:permissionsdispatcher-processor:2.2.0'
+    //事件总线
+    implementation 'org.greenrobot:eventbus:3.0.0'
+    //MMKV 腾讯替代SP
+    implementation 'com.tencent:mmkv:1.0.17'
+    //textview跑马灯
+    implementation 'com.superluo:textbannerview:1.0.5'
+    //图表
+    implementation 'com.github.PhilJay:MPAndroidChart:v3.1.0'
+    implementation 'com.github.zzz40500:AndroidSweetSheet:1.1.0'
+}

@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/dialog_navi_end_shape"
+    android:paddingTop="20dp"
+    android:paddingBottom="40dp">
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="200dp"
+        android:src="@drawable/navi_js"
+        android:layout_gravity="center_horizontal"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="到达目的地，导航结束！"
+        android:textSize="18sp"
+        android:textColor="#3F3F3F"
+        android:layout_gravity="center_horizontal"/>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="20dp">
+
+        <TextView
+            android:id="@+id/open_meals"
+            android:layout_width="120dp"
+            android:layout_height="35dp"
+            android:background="@drawable/dialog_navi_meals_text_shape"
+            android:text="周边订餐"
+            android:textSize="16sp"
+            android:textColor="#ffffff"
+            android:gravity="center"/>
+
+        <TextView
+            android:id="@+id/but"
+            android:layout_width="120dp"
+            android:layout_height="35dp"
+            android:background="@drawable/dialog_navi_end_text_shape"
+            android:text="确定"
+            android:textSize="16sp"
+            android:textColor="#4A83F6"
+            android:gravity="center"
+            android:layout_marginLeft="50dp"/>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_gravity="center_horizontal"
+        android:gravity="center_horizontal"
+        android:background="@drawable/dialog_navi_lin_text_shape"
+        android:layout_marginTop="20dp"
+        android:padding="20dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="会议安排"
+            android:textSize="16sp"
+            android:textColor="#3F3F3F"
+            android:textStyle="bold"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="2019-08-27 10:00-11.30 人工智能未来之路大会"
+            android:textSize="16sp"
+            android:textColor="#3F3F3F"
+            android:layout_marginTop="12dp"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="2019-08-27 10:00-11.30 人工智能未来之路大会"
+            android:textSize="16sp"
+            android:textColor="#3F3F3F"
+            android:layout_marginTop="12dp"/>
+
+    </LinearLayout>
+
+</LinearLayout>
